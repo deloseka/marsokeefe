@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mars O'Keefe</title>
+    <link rel="stylesheet" media="screen" href="./Files/CSS/css.css" type="text/css"/>
+    <link rel="icon" type="image/x-icon" href="./Files/Images/ico.ico">
+    <meta name="robots" content="noindex, nofllow, noai, noimageai">
+    <meta http-equiv="X=UA-Compatible" content="IE=edge">
+    <meta name="author" content="Created by Mars O'Keefe.">
+    <meta name="description" content="Mars O'Keefe's website">
+    <meta name="license" content="CC BY-NC-SA">
+  </head>
+<body>
+       <header aria-label="Primary navigation">
+           <h1 id=logo>Mars O'Keefe</h1>
+             <ul>
+                <li class="dropdown">
+                  <button type="button" class="dropdown__title" aria-expanded="false" aria-controls="dropdown" aria-haspopup="true" aria-label="Navigation menu"><h1 id="hamburger">☰</h1></button>
+                  <ul class="dropdown_menu">
+                    <li><a rel="noopener noreferrer" href="./index.html">Home</a></li>
+                    <li><a rel="noopener noreferrer" href="./cv.html">Resume</a></li>
+                    <li><a rel="noopener noreferrer" href="./portfolio.html">Portfolio</a></li>
+                    <li><a rel="noopener noreferrer" href="./credits.html">Credit</a></li>
+                  </ul>
+                </li>
+              </ul>
+    </header>
+    <main>
+      <section id="indexsection">
+        <h2>Hello there! ☆</h2>
+        <p>I'm Mars! I create digital graphic design pieces with strong consideration to emotions. I am particularly drawn to graphic design because I want others to feel the ideas I’m so drawn to. I have strong, intense emotions about concepts I create, strong enough to struggle to verbalize these concepts, and my work became a way to express that.</p>
+        <p>My creative process usually starts with a vision board and a long-form document where I excessively write about my concept, sometimes thousands of words. Rather than visually planning, I typically dive right in after brainstorming to let the process unfold as I create. This blend of structure and spontaneity helps me stay connected to the emotional core of every piece I make. Utilizing a multimedia approach with the Adobe Suite for graphic design and character illustration, HTML and CSS for website development, and watercolor for traditional pieces, I usually make book covers, websites, flyers, posters, postcards, and anything meant to convey information, especially if they need a creative hand.</p>
+        <p>Thank you for visiting my website, and I hope you enjoy my work! Below, you can preview a few of my most recent pieces.</p>
+        <div class="row">
+                <img class="portimg" src="./Files/Images/Portfolio/CUP/Book Covers/2025/2025_underonecanopy.jpg" onclick="onClick(this)" alt="2025, Under One Canopy book cover.">
+                <img class="portimg" src="./Files/Images/Portfolio/School/Graphic Design/2025_type_poster.png" onclick="onClick(this)" alt="2025, Lisdexamphetamine poster for the font I made.">
+                <img class="portimg" src="./Files/Images/Portfolio/Personal/2026_elaris.png" onclick="onClick(this)" alt="2026, Elaris brand design and logo.">
+        </div>
+      </section>
+    </main>
+
+                    <div class="modal" onclick="this.style.display='none'">
+                        <span class="portbutton">×</span>
+                        <div class="modal-content">
+                        <img class="inimage">
+                        <p id="caption"></p>
+                        </div>
+                    </div>
+
+        <script>
+          /* Modal Image Gallery – class‑based version */
+          function onClick(element) {
+              // Grab the first element that matches the selector
+              const img   = document.querySelector('.inimage');
+              const modal = document.querySelector('.modal');
+
+              if (img && modal) {
+                  img.src = element.src;          // show the clicked picture
+                  modal.style.display = 'block';  // make the overlay visible
+                  const captionText = document.getElementById('caption');
+                  if (captionText) captionText.innerHTML = element.alt;
+              } else {
+                  console.warn('Modal elements not found in the DOM.');
+              }
+          }
+        </script>
+</body>
