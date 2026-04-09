@@ -1,0 +1,404 @@
+@font-face {
+  font-family: 'Dosis';
+  src: url(../Fonts/dosis.ttf);
+}
+  
+@font-face {
+  font-family: 'Quicksand';
+  src: url(../Fonts/quicksand.ttf);
+}
+
+@font-face {
+  font-family: 'Bellota';
+  src: url(../Fonts/bellota.ttf);
+}
+
+body {
+    font-family: 'Quicksand', system-ui, sans-serif;
+      height:100%;
+    margin:0;
+    padding:0;
+    background: url(../Images/background.jpeg);
+      background-size: 100vw;
+  display:block;
+  animation: fadeIn 1.5s ease-out;
+  overflow: hidden;
+  color:#043A3E;
+}
+
+.commbody {
+  overflow: scroll;
+}
+
+main {
+      animation: slideFade 1.2s ease-out;
+    display:flex;
+    padding:0 2% 0 2%;
+    margin:0;
+}
+
+header {
+    background: #ffffff;
+      animation: slideFade 1.2s ease-out;
+      height:8rem;
+    align-items:center;
+    display:flex;
+    justify-content: space-between;
+    padding-left:1.5em;
+    padding-right: 1.5em;
+    margin-bottom:1em;
+}
+
+section {
+  background: white;
+  border-radius: 2em;
+  padding:2em;
+  z-index:2;
+  max-width:60%;
+  height:90%;
+  margin-top:1em;
+  overflow: scroll;
+}
+
+#indexsection {
+  max-height: 40em;
+}
+
+nav {
+  animation: slideFade 1.2s ease-out;
+}
+
+h1 {
+    font-family: 'Bellota';
+    color:#386555;
+    font-size:3em;
+}
+
+h4, h5 {
+  margin:.8em 0 .8em 0;
+}
+
+#navmenu {
+    -webkit-transition: -webkit-transform .3s ease-in-out;
+    -ms-transition: -ms-transform .3s ease-in-out;
+    transition: transform .3s ease-in-out;
+}
+
+#navmenu:hover {
+  transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+}
+
+/* -------------------- Dropdown Menu -------------------- */
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+}
+
+#hamburger {
+    font-size:2.2em;
+}
+
+li {
+  padding: .25em;
+}
+
+.dropdown__title {
+  background-color: transparent;
+  border: none;
+  font-family: inherit;
+}
+
+nav > ul > li .dropdown__title {
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  color: #e21ebf;
+}
+
+nav > ul > li > a,
+nav > ul > li .dropdown__title {
+  padding: 1rem 0.5rem;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown .dropdown_menu {
+  position: absolute;
+  transform: rotateX(-90deg) translateX(-50%);
+  transition: 280ms all 120ms ease-out;
+  z-index:3;
+}
+
+.dropdown:hover .dropdown_menu,
+.dropdown:focus-within .dropdown_menu {
+  opacity: 0.85;
+  transform: rotateX(0) translateX(-50%);
+  visibility: visible;
+  font-size:1.2em;
+}
+
+.dropdown_menu {
+    background-color: white;
+    min-width: 8em;
+    padding: 0.6em 0.8em;
+}
+
+/* -------------------- Dropdown Menu End -------------------- */
+
+/* --------- Link Colors --------- */
+
+a {
+  color:#069076;
+}
+
+a:hover {
+  color:#903b06;
+}
+
+a:focus {
+  color:#903b06;
+}
+
+a:active {
+  color:#067990;
+}
+
+/* --------- Link Colors End --------- */
+
+.pfp {
+  width:100%;
+  height:auto;
+  border-radius:90%;
+}
+
+/* -------------------- CV and COMMS PAGE -------------------- */
+
+  .section {
+    display:flex;
+    animation: slideFade 1.2s ease-out;
+    column-gap: 3em;
+    max-width:99%;
+  }
+
+  .section2 {
+    display:block;
+    animation: slideFade 1.2s ease-out;
+    max-width:99%;
+  }
+
+  .smallersection {
+    display:flex;
+    max-width:99%;
+  }
+
+  #left {
+    width:20%;
+    display:block;
+  }
+
+  #right {
+    width:80%;
+    display:block;
+}
+
+  .smallerleft {
+    width:50%;
+    display:block;
+    text-align:left;
+  }
+
+  .smallerright {
+    width:50%;
+    display:block;
+    text-align:right;
+}
+
+/* -------------------- CV PAGE END -------------------- */
+
+/* -------------------- PORTFOLIO PAGE -------------------- */
+
+.portimg {
+  flex: 1 1 calc(33.333% - 0.8rem);
+  max-width: calc(33.333% - 0.8rem);
+  height: auto;
+  max-height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.portimg:hover {
+  opacity: 1;
+  transform: scale(1.03);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.hide {
+ display:none;
+ margin-top:4em;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: flex-start;
+}
+
+.portbutton {
+ border:none;
+ display:inline-block;
+ padding:8px 16px;
+ vertical-align:middle;
+ overflow:hidden;
+ text-decoration:none;
+ color:inherit;
+ background-color:inherit;
+ text-align:center;
+}
+
+.modal {
+ z-index:4;
+ display:none;
+ padding-top:0;
+ position:fixed;
+ left:0;
+ top:0;
+ width:100%;
+ height:100%;
+ overflow:auto;
+ background-color:rgb(0,0,0);
+ background-color:rgba(0,0,0,0.4)
+}
+
+.modal-content {
+ margin:auto;
+ background-color:#fff;
+ position:relative;
+ padding:0;
+ outline:0;
+ width:600px;
+ text-align:center;
+}
+
+#caption {
+ display:inline-block;
+}
+
+.inimage {
+ max-width:100%;
+ height:auto
+}
+
+
+/* -------------------- PORTFOLIO PAGE END -------------------- */
+
+ /* ----------------- ANIMATIONS  -----------------  */  
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideFade {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  button:hover, a:hover {
+    transform: scale(1.05);
+  }
+
+  button:active, a:active {
+    transform: scale(0.97);
+  }
+
+  @keyframes glowPulse {
+    0%, 100% { 
+        text-shadow: 0 0 8px rgba(255, 255, 255, 0.5), 
+                    0 0 15px rgba(255, 255, 255, 0.2); 
+    }
+    50% { 
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 
+                    0 0 20px rgba(255, 255, 255, 0.5), 
+                    0 0 30px rgba(255, 255, 255, 0.3); 
+    }
+}
+
+ /* ----------------- ANIMATIONS END  -----------------  */  
+
+
+ /* --------- Phones --------- */ 
+@media (max-width: 931px){
+
+body {
+  overflow: scroll;
+}
+
+main {
+    padding:0;
+}
+
+section {
+  padding:1em;
+  max-width:100%;
+}
+
+  #webdoll{
+    display:none;
+  }
+
+  .section {
+    display:block;
+    animation: slideFade 1.2s ease-out;
+    max-width:99%;
+    padding:2em;
+  }
+
+  #left {
+    display:block;
+    width:100%;
+  }
+
+  #right {
+    display:block;
+    width:100%;
+}
+
+    .row {
+      flex-direction: column;
+    }
+
+    .portimg {
+      flex: 1 1 100%;
+      max-width: 100%;
+      max-height: none;
+    }
+
+}
+
+/* --------- Desktop --------- */
+@media (min-width: 932px){
+
+}
