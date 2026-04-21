@@ -18,7 +18,7 @@ body {
       height:100%;
     margin:0;
     padding:0;
-    background: url(Files/Images/background.jpeg);
+    background: url(../Images/background.jpeg);
       background-size: 100vw;
   display:block;
   animation: fadeIn 1.5s ease-out;
