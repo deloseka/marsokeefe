@@ -90,6 +90,12 @@ h4, h5 {
   -webkit-transform: scale(1.2);
 }
 
+.pfp {
+  width:100%;
+  height:auto;
+  border-radius:90%;
+}
+
 /* --------- Social Media --------- */
 .social {
   display: flex;
