@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mars O'Keefe</title>
+    <link rel="stylesheet" media="screen" href="./Files/CSS/portfolio.css" type="text/css"/>
+    <link rel="icon" type="image/x-icon" href="./Files/Images/ico.ico">
+    <meta name="robots" content="noindex, nofllow, noai, noimageai">
+    <meta http-equiv="X=UA-Compatible" content="IE=edge">
+    <meta name="author" content="Created by Mars O'Keefe.">
+    <meta name="description" content="Mars O'Keefe's website">
+    <meta name="license" content="CC BY-NC-SA">
+  </head>
+  <body>
+  <h1>Web Design</h1>
+    <div class="row">
+      <img class="portimg" src="./Files/Images/Portfolio/Websites/2025_bee_website.jpg" onclick="onClick(this)" alt="BEEDOTCOM (2025). Website made with HTML and CSS. Artwork created by @beedotpng on Twitter.">
+      <img class="portimg" src="./Files/Images/Portfolio/Websites/2025_websitecookie.jpg" onclick="onClick(this)" alt="Recipe Website (2025). Website made with HTML and CSS. Photography by me. Created for Intermediate Graphic Design. 
+  ">
+      <img class="portimg" src="./Files/Images/Portfolio/Websites/2025_websitecookie2.jpg" onclick="onClick(this)" alt="Recipe Website Mobile (2025). Website made with HTML and CSS. Photography by me. Created for Intermediate Graphic Design.">
+    </div>
+    
+            <div class="modal" onclick="this.style.display='none'">
+                        <span class="portbutton">×</span>
+                        <div class="modal-content">
+                        <img class="inimage">
+                        <p id="caption"></p>
+                        </div>
+                    </div>
+        <script>
+          /* Modal Image Gallery – class‑based version */
+          function onClick(element) {
+              // Grab the first element that matches the selector
+              const img   = document.querySelector('.inimage');
+              const modal = document.querySelector('.modal');
+
+              if (img && modal) {
+                  img.src = element.src;          // show the clicked picture
+                  modal.style.display = 'block';  // make the overlay visible
+                  const captionText = document.getElementById('caption');
+                  if (captionText) captionText.innerHTML = element.alt;
+              } else {
+                  console.warn('Modal elements not found in the DOM.');
+              }
+          }
+        </script>
+        
+  </body>
+</html>
