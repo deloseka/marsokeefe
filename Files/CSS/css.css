@@ -96,6 +96,17 @@ h4, h5 {
   border-radius:90%;
 }
 
+#leftport {
+  width:10%;
+  display:block;
+}
+
+#portbox {
+  width:80vw;
+  border:0;
+  height:73vh;
+}
+
 /* --------- Social Media --------- */
 .social {
   display: flex;
